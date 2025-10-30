@@ -26,8 +26,9 @@ HTML = """
 def home():
     name = None
     if request.method == 'POST':
-        name = request.form.get('name')  # ✅ poprawione
+        name = request.form.get('name')  
     return render_template_string(HTML, name=name)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
+
